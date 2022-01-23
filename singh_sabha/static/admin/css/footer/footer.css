@@ -1,0 +1,27 @@
+section.singh-sabha-footer  {
+
+    background-color: #000;
+    height: 100px;
+    
+}
+table {
+
+    display: block;
+    width: 100%;
+}
+
+td {
+    display: flex;
+    position: relative;
+    color: #fff;
+    width: 50%;
+   
+}
+
+tr {
+    width: 100%;
+}
+footer {
+    top: 700;
+    position: relative;
+}
