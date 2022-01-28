@@ -1,0 +1,1 @@
+web: gunicorn singh_sabha.singh_sabha.wsgi
