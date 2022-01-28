@@ -4,7 +4,7 @@
     {% block stylesheets %}
     <head >
         <title>Charan Kamal Sahib</title>
-        <link rel="icon" type="image/gif" href="../static/admin/img/khanda-min.png" />
+        <link rel="icon" type="image/gif" href="{% static 'admin/img/khanda-min.png' %}" />
         <!-- <meta charset="utf-8"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <link rel="stylesheet" href="{% static 'admin/css/layout.css' %}" />
@@ -19,10 +19,7 @@
         {% block extra_head %}{% endblock %}
 
         <style>
-            * {box-sizing: border-box}
-            body {font-family: Verdana, sans-serif; margin:0}
-            .mySlides {display: none}
-            img {vertical-align: middle;}
+            
             
             /* Slideshow container */
             .slideshow-container {
@@ -190,11 +187,11 @@
     <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
     <!-- JAVASCRIPTS -->
 
-<script src="../static/admin/js/vendor/jquery/jquery.min.js"></script>
-<script src="../static/admin/js/jquery.backtotop.js"></script>
-<script src="../static/admin/js/jquery.mobilemenu.js"></script>
-<script src="../static/admin/js/slideshow.js"></script>  
-<script src="../static/admin/js/location.js"></script>  
+<script src="{% static 'admin/js/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'admin/js/jquery.backtotop.js' %}"></script>
+<script src="{% static 'admin/js/jquery.mobilemenu.js' %}"></script>
+<script src="{% static 'admin/js/slideshow.js' %}"></script>  
+<script src="{% static 'admin/js/location.js' %}"></script>  
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPrxdvUfDbdSyEuLRjOeN6dJy1-QnYtvc&callback=initMap&v=weekly"
