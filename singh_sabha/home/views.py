@@ -7,3 +7,9 @@ def index(request):
 
 def about(request):
     return render(request,'partial/about.html')
+
+def location(request):
+    return render(request,'partial/location.html') 
+
+def contact(request):
+    return render(request,'partial/contact.html')       
