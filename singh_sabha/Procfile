@@ -1,1 +1,1 @@
-web: gunicorn singh_sabha.singh_sabha.wsgi
+web: gunicorn singh_sabha.wsgi
