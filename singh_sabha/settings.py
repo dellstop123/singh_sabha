@@ -50,7 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.contrib.admindocs.middleware.XViewMiddleware'
+    'django.contrib.admindocs.middleware.XViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'singh_sabha.urls'
@@ -122,7 +123,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-STATIC_ROOT = os.path.join(PROJECT_DIR,'static')
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_DIR = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
