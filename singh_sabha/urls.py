@@ -21,6 +21,6 @@ from home.views import (index)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('admin/doc/', include('django.contrib.admindocs.urls')),
-    path(r'singh_sabha/', include('home.urls')),
+    path(r'', include('home.urls')),
     # path(r'^$',index,name='index')
 ]

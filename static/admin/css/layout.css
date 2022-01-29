@@ -17,7 +17,7 @@
 --------------------------------------------------------------------------------------------------------------- */
 .padtop{padding:80px 0 0 0;}
  
-#header{padding:0 30px;}
+#header{padding:0 30px; }
 
 #header #logo{margin:22px 0 0 0;}
 #header #logo h1{margin:0; padding:0; font-size:2rem; font-variant:small-caps;}
@@ -279,7 +279,7 @@ label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#0AC6FC !important;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
-.overlay::after{color:inherit; background-color:rgba(44, 48, 48, 0.55);}
+.overlay::after{color:inherit; background-color:transparent !important;}
 .overlay.light{color:#474747;}
 .overlay.light::after{background-color:rgba(255,255,255,.7);}
 
@@ -300,7 +300,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0AC6FC !important;}
 
 
 /* Header */
-#header{color:#FFFFFF; background-color:#01546B;}
+#header{color:#FFFFFF; background-color:orange; position: fixed;top: 0;}
 #header #logo a{color:inherit;}
 
 
