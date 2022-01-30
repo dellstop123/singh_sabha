@@ -52,6 +52,17 @@
 #ctdetails div:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
 
 
+
+.card p{
+    font-size: large;
+    font: outline;
+} 
+.card strong{
+    color: black;
+    font-size: x-large;
+}
+
+
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
 .container{padding:80px 0;}
@@ -378,13 +389,27 @@ table a, #comments a{background-color:inherit;}
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:1140px){
     .hoc{max-width:1140px;}
-
+    .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:33%; margin:0 0 30px 0;max-width: 100%;}
     .ghead1{ font-size: xxx-large;
         max-width:100%;}
     .ghead2{ font-size: x-large;
             max-width:100%;}
     .ghead{ max-width:100%;}
-}
+    .top-header marquee {
+        padding: 0;
+    } 
+    .top-header span {
+        padding: 0;
+    } 
+    .top-header a {
+        padding: 0;
+    }
+
+
+    #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
+
+
+    }
 
 @media screen and (min-width:978px) and (max-width:1140px) and (max-width:1024px){
     .hoc{max-width:95%;}
@@ -394,12 +419,24 @@ table a, #comments a{background-color:inherit;}
     .ghead2{ font-size: large;
             max-width:100%;}
     .ghead{ max-width:100%;}
-}
+    
+    .top-header a {
+        padding: 0;
+        overflow: marquee-line;
+    }
+
+    
+    }
 
 
 /* Mobile Devices
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width:978px) and (max-width:820px){
+
+.one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:33%; margin:0 0 30px 0;max-width: 100%;}
+.top-header a {
+    padding: 0;
+}
 	.hoc{max-width:90%;}
 
 	#header{padding:30px;}
@@ -425,12 +462,14 @@ table a, #comments a{background-color:inherit;}
     .ghead2{ font-size: large;
             max-width:100%;}
     .ghead{ max-width:100%;}
+
+    #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
 }
 
 @media screen and (max-width:768px){
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
 	.fl_left, .fl_right{display:block; float:none;}
-	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0;}
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:100%; margin:0 0 30px 0;}
 	.last, .group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 
 	#header{text-align:center;}
@@ -452,9 +491,19 @@ table a, #comments a{background-color:inherit;}
     .ghead2{ font-size: small;
             max-width:100%;}
     .ghead{ max-width:100%;}
+    #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
+   
+.top-header a {
+    padding: 0;
+    overflow: marquee-line;
+}
 }
 
-@media screen and (max-width:425px) and (max-width:375px){
+@media screen and (max-width:425px) and (max-width:375px) and (max-width:320px) {
+    .top-header marquee {
+        padding: 0;
+    } 
+    .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:33%; margin:0 0 30px 0;max-width: 100%;}
 	#points{padding:30px;}
 	#points li{display:block; float:none; width:100%; margin-left:0;}
     #points li:nth-last-child(2){margin-bottom:20px;}
@@ -465,12 +514,21 @@ table a, #comments a{background-color:inherit;}
     .ghead2{ font-size: small;
             max-width:100%;}
     .ghead{ max-width:100%;}
+ 
+
+
+#ctdetails ul li{position: relative; max-width: 100%;width: auto;}
+
 }
 
 
 /* Other
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width:650px){
+    .top-header marquee {
+        padding: 0;
+    } 
+    .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:33%; margin:0 0 30px 0;max-width: 100%;}
 	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
 	.scrollable table{margin:0; padding:0; white-space:nowrap;}
 
@@ -485,6 +543,7 @@ table a, #comments a{background-color:inherit;}
     .ghead2{ font-size: small;
             max-width:100%;}
     .ghead{ max-width:100%;}
+    #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
 }
 
 @-webkit-keyframes heading { from { margin-left: 100%;width: 300%; }

@@ -46,7 +46,7 @@
 <!-- News & Events  -->
     <div class="column" style="width: 300px;height: 300px;float: left;padding-left: 15px;padding-right: 15px;margin: 10px;
       background-color: #dcecff;">
-      <h2 style="display: flex;justify-content: center;background:#272979 none repeat scroll 0 0;color: white;">News & Events</h2>
+      <h2 style="display: flex;justify-content: center;font-size:18px;background:#272979 none repeat scroll 0 0;color: white;">News & Events</h2>
         <marquee direction="up" 
         height="200" scrollamount="2" onmouseover="this.stop();" 
         onmouseout="this.start();" class="card-text">
@@ -101,40 +101,46 @@
 <br>
 <br>
 
-
+<div class="hoc container clear">
+  <a class="weatherwidget-io" href="https://forecast7.com/en/32d3975d52/kathua/" 
+  data-label_1="KATHUA" data-label_2="WEATHER" data-theme="original" >KATHUA WEATHER</a>
+</div>
 <div class="row" >
  
-<div class="col-sm-3 col-md-6" style="background-image:url('../../static/admin/img/gallery/bg-2.jpeg');">
+<div class="col-sm-3 col-md-6" style="background-image:url('../../static/admin/img/gallery/bg-2.jpeg');width: 100%;
+border-top: solid 3px blue ;">
   <div class="hoc container clear"> 
-
-     <strong><h1 style="display: flex;justify-content: center;">Photo Gallery</h1></strong>
-
-    <div class="slideshow-container" style="width: 500px;height: 300px;">
-        
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">3 / 8</div> -->
-            <img src="{% static 'admin/img/gallery/img-3.jpeg' %}" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">4 / 8</div> -->
-            <img src="{% static 'admin/img/gallery/img-4.jpeg' %}" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">5 / 8</div> -->
-            <img src="{% static 'admin/img/gallery/img-5.jpeg' %}" style="width:100%">
-        </div> 
-            <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-chevron-circle-left"></i></a>       
-            <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-circle-right"></i></a>       
-        </div>
         <br>      
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
 
-
-      
-    </div>
+        <section id="section_2" class="section_2" >
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 col-xs-12" align="center">
+                      <h1>Construction Gallery</h1>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
+                      <img src="{% static 'admin/img/gallery/cons1.jpg' %}" class="guneet" >
+                      
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
+                      <img src="{% static 'admin/img/gallery/const2.jpg' %}" class="guneet" >
+                      
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
+                      <img src="{% static 'admin/img/gallery/const3.jpg' %}" class="guneet">
+                      
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
+                      <img src="{% static 'admin/img/gallery/const4.jpg' %}" class="guneet" >
+                      
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
+                      <img src="{% static 'admin/img/gallery/lngr.jpg' %}" class="guneet" >
+                      
+                  </div>
+              </div>
+          </div>
+      </section>
   </div>
 </div>
 </div>

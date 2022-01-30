@@ -53,6 +53,14 @@ h1{
     background-color: #555;
   }
   
+  .guneet {
+
+    border: solid 3px white ;
+
+  }
+  #charan {
+    padding-top:10px;
+  }
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
