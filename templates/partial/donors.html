@@ -1,0 +1,22 @@
+{% extends "partial/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<h4 style="display: flex;justify-content: center;padding: 15px 15px 15px 15px;color: black;"><span>List of Donors who have donated to the Gurudwara Charan Kamal Sahib, Bakhta</span></h1>
+    {% for name,price,date in donate %}
+<div class="card mb-7" style="max-width: 350px;background-color: orange;display: inline-block;">
+    <div class="row g-0">
+
+      <div class="col-sm-12">
+        <div class="card-body">
+          <h5 class="card-title">{{date}}</h5>
+          <hr>
+          <p class="card-text"><b>Name:</b> {{name}}</p>
+          <p class="card-text"><span >Amount: {{price}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}
