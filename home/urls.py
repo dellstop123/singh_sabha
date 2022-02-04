@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (index,about,location, contact,donors)
+from .views import (index,about,location, contact,donors,programme)
 
 
 urlpatterns = [
@@ -8,5 +8,6 @@ urlpatterns = [
     path('location',location,name='location'),
     path('contact',contact,name='contact'),
     path('donors',donors,name='donors'),
+    path('programme',programme,name='programme'),
 
 ]

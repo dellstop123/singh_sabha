@@ -1,20 +1,10 @@
 from django.shortcuts import render
 from .form import ContactForm
 from django.contrib import messages
-from .models import Donation, News
+from .models import Donation, News, Programme
 # Create your views here.
 
-def index(request):
-    # donation(request)
-    # donation = Donation.objects.values().order_by('-date')[:5]
-    # name =[]
-    # price = []
-    # date =[]
-    # for i in range(donation.count()):
-    #         name.append(donation[i]['name']),
-    #         price.append(donation[i]['price']),
-    #         date.append(donation[i]['date'])
-          
+def index(request):         
     donate = donation(request)
     events = news(request)
     context = {"donate":donate,"events":events}    
@@ -22,6 +12,20 @@ def index(request):
 
 def about(request):
     return render(request,'partial/about.html')
+
+def programme(request):
+    programme = Programme.objects.values().order_by('-uploaded_at')
+    desc =[]
+    img = []
+    date =[]
+    for i in range(programme.count()):
+            desc.append(programme[i]['description']),
+            img.append(programme[i]['image']),
+            date.append(programme[i]['uploaded_at'])
+          
+    program = zip(desc,img,date)
+    context = {"programme":program}
+    return render(request,'partial/programme.html',context)    
 
 def donors(request):
     donate = donation(request)

@@ -27,3 +27,11 @@ class News(models.Model):
 
     def __str__(self):
         return self.description
+
+class Programme(models.Model):
+    description = models.CharField(max_length=255, blank=True)
+    image = models.ImageField(upload_to='programme_images/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.description
