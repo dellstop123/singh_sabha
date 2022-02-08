@@ -1,17 +1,29 @@
 from django.shortcuts import render
 from .form import ContactForm
 from django.contrib import messages
-from .models import Donation, News, Programme
+from .models import Donation, News, Programme, About, Gallery, Carousel
 # Create your views here.
 
 def index(request):         
     donate = donation(request)
     events = news(request)
-    context = {"donate":donate,"events":events}    
+    galery = gallery(request)
+    slider = carousel(request)
+    context = {"donate":donate,"events":events,"gallery":galery,"carousel":slider}    
     return render(request,'partial/body.html',context) 
 
 def about(request):
-    return render(request,'partial/about.html')
+    about = About.objects.values()
+    img = []
+    title = []
+    name =[]
+    for i in range(about.count()):
+        img.append(about[i]['image'])
+        title.append(about[i]['title'])
+        name.append(about[i]['name'])
+    abt = zip(img,title,name)
+    context = {"about":abt}
+    return render(request,'partial/about.html',context)
 
 def programme(request):
     programme = Programme.objects.values().order_by('-uploaded_at')
@@ -72,3 +84,20 @@ def news(request):
 
     events = zip(desc,docs,link)
     return events    
+
+
+def gallery(request):
+    gallery = Gallery.objects.values()
+    image =[]
+    for i in range(gallery.count()):
+        image.append(gallery[i]['image'])
+    gall = image
+    return gall
+
+def carousel(request):
+    carousel = Carousel.objects.values()
+    image =[]
+    for i in range(carousel.count()):
+        image.append(carousel[i]['image'])
+    car = image
+    return car

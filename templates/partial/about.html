@@ -1,103 +1,24 @@
 
 {% extends "partial/base.html" %}
-
+{% load static %}
 {% block content %}
 
-<div class="about-section" style="background: transparent;">
-    <h1 style="font-size: xxx-large; color: black;"><strong>About Us</strong></h1>
-  </div>
- 
-  <h2 style="text-align:center">Committee Members</h2>
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/rattan_orig.png" alt="Chairman" style="width:auto; ">
-        <div class="container">        
-          <p class="title">S. HARPAL SINGH RATTAN</p>
-          <strong class="title" >Chairman</strong>          
-        </div>
-      </div>
+    <div class="tab" style="display: block;background-color: navy; padding: 15px 15px 15px 15px;">
+      <h1 style="display:flex;color:white;justify-content: flex-start;">About Us</h1>
     </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/gur.jpeg" alt="Mike" style="width:100%">
-        <div class="container">        
-          <p class="title">MASTER GURNAM SINGH</p>
-          <strong class="title">GEN. SECRETARY/CASHIER</strong>          
+    {% for image,title,name in about %}
+      
+    <div class="card" style="width: 18rem;display:inline-flex;justify-content:space-between;">
+        {% if image %}
+        <img class="card-img-top" src="media/{{ image }}" alt="Card image cap" style="width: 100%;height: 50%; float: left; margin-right: 10px;" >
+        {% else %}
+        <img class="card-img-top" src="media/programme_images/khanda.jpeg" alt="Card image cap" style="width: 100%;height: 50%; float: left; margin-right: 10px;" >
+        {% endif %}
+        <div class="card-body">
+          <p class="card-text">{{name}}</p>
+          <span class="card-text">{{title}}</span>
         </div>
-      </div>
-    </div>   
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/dr_orig.jpeg" alt="John" style="width:100%">
-        <div class="container">   
-          <p class="title">DR. GURBACHAN SINGH BACHAN</p>
-          <strong class="title">Sr. VICE CHAIRMAN</strong>          
-        </div>
-      </div>
     </div>
-  </div>
+      {% endfor %}
 
-
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/mahan_orig.jpeg" alt="Chairman" style="width:100%; " >
-        <div class="container">        
-          <p class="title">S. MOHAN SINGH BAGHI</p>
-          <strong class="title" >SR VICE CHAIRMAN</strong>          
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/karam_orig.jpeg" alt="Mike" style="width:100%" >
-        <div class="container">        
-          <p class="title">S. KARAM SINGH</p>
-          <strong class="title">SR VICE CHAIRMAN</strong>          
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/barnoti.jpeg" alt="John" style="width:100%">
-        <div class="container">   
-          <p class="title">DR. GURBACHAN SINGH BACHAN</p>
-          <strong class="title">Sr. VICE CHAIRMAN</strong>          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/11_orig.jpg" alt="Chairman" style="width:100%; " >
-        <div class="container">        
-          <p class="title">S. DALIP SINGH</p>
-          <strong class="title" >SECRETARY</strong>          
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/abc.jpeg" alt="Mike" style="width:100%" >
-        <div class="container">        
-          <p class="title">S. GURDEV SINGH SODHI</p>
-          <strong class="title">ADDITIONAL SECRETARY</strong>          
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="../../static/admin/img/gallery/bira.jpeg" alt="John" style="width:100%">
-        <div class="container">   
-          <p class="title">BABA JASBIR SINGH JI BEERA</p>
-          <strong class="title">PANTH RATTAN BABA HARBHANS SINGH JI <br> ​DELHI KAAR SEWA WALE</strong>          
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endblock %}
+      {% endblock %}

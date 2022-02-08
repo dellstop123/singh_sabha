@@ -131,26 +131,13 @@ border-top: solid 3px blue ;">
                   <div class="col-md-12 col-xs-12" align="center">
                       <h1>Construction Gallery</h1>
                   </div>
+                  {% for image in gallery %}
                   <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
-                      <img src="{% static 'admin/img/gallery/cons1.jpg' %}" class="guneet" >
+                    
+                      <img src="media/{{ image }}" class="guneet" >
                       
                   </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
-                      <img src="{% static 'admin/img/gallery/const2.jpg' %}" class="guneet" >
-                      
-                  </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
-                      <img src="{% static 'admin/img/gallery/const3.jpg' %}" class="guneet">
-                      
-                  </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
-                      <img src="{% static 'admin/img/gallery/const4.jpg' %}" class="guneet" >
-                      
-                  </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12" id="charan">
-                      <img src="{% static 'admin/img/gallery/lngr.jpg' %}" class="guneet" >
-                      
-                  </div>
+                  {% endfor %}
               </div>
           </div>
       </section>
