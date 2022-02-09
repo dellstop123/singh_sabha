@@ -150,14 +150,14 @@
         </div>      
        </div>
   
-       {% for image in carousel %}
+       {% for gallery in carousel %}
 
-    <div class="bgded overlay padtop" style="background-image: url('media/{{image}}') ;height:900px;background-size:100%;"> 
+        <div class="bgded overlay padtop" style="background-image: url('media/{{gallery}}');background-size:100%;height: 900px;"> 
 
-    {% endfor %}
+       {% endfor %}
       
-        <header id="header" class="hoc clear" style="background-color: orange;position: sticky;
-             ;border: 3px solid black;">
+        <header id="pageintro" class="hoc clear" style="background-color: orange;position: sticky;
+             border: 3px solid black;">
             <div id="logo" class="fl_left"> 
         
               <h1 ><a href="{% url 'index' %}" >Gurudwara Charan Kamal Sahib</a></h1>
@@ -174,9 +174,10 @@
                 <li><a href='{% url "contact" %}'>Contact Us</a></li>
               </ul>
             </nav>
+           
           </header>
-
-          <div id="pageintro" class="hoc clear"> 
+          
+          <div id="pageintro" > 
           </div>
          
     </div>

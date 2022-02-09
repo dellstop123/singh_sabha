@@ -15,3 +15,12 @@ function fade_alerts() {
 window.addEventListener('DOMContentLoaded', (event) => {
     fade_alerts();
 });
+
+function myFunction() {
+    var x = document.getElementById("pageintro");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }

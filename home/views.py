@@ -22,7 +22,8 @@ def about(request):
         title.append(about[i]['title'])
         name.append(about[i]['name'])
     abt = zip(img,title,name)
-    context = {"about":abt}
+    slider = carousel(request)
+    context = {"about":abt,"carousel":slider}
     return render(request,'partial/about.html',context)
 
 def programme(request):
@@ -36,16 +37,20 @@ def programme(request):
             date.append(programme[i]['uploaded_at'])
           
     program = zip(desc,img,date)
-    context = {"programme":program}
+    slider = carousel(request)
+    context = {"programme":program,"carousel":slider}
     return render(request,'partial/programme.html',context)    
 
 def donors(request):
     donate = donation(request)
-    context = {"donate":donate} 
+    slider = carousel(request)
+    context = {"donate":donate,"carousel":slider} 
     return render(request,'partial/donors.html',context)    
 
 def location(request):
-    return render(request,'partial/location.html') 
+    slider = carousel(request)
+    context = {"carousel":slider}
+    return render(request,'partial/location.html',context) 
 
 def contact(request):
     if request.method == 'POST':

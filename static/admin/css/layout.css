@@ -406,6 +406,7 @@ table a, #comments a{background-color:inherit;}
     }
 
 
+   
     #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
 
 
@@ -425,8 +426,6 @@ table a, #comments a{background-color:inherit;}
         overflow: marquee-line;
     }
 
-    
-    }
 
 
 /* Mobile Devices
@@ -451,7 +450,7 @@ table a, #comments a{background-color:inherit;}
 	.container{}
 	#comments input[type="reset"]{margin-top:10px;}
 	.pagination li{display:inline-block; margin:0 5px 5px 0;}
-
+    /* #pageintro{padding:20px 0;} */
 	#footer{}
 
 	#copyright{}
@@ -474,7 +473,7 @@ table a, #comments a{background-color:inherit;}
 
 	#header{text-align:center;}
 	#header #logo{margin:0 0 15px 0;}
-
+    /* #pageintro{padding:20px 0;} */
 	#pageintro article{max-width:none;}
 	#pageintro .heading{margin-bottom:20px; font-size:2.5rem;}
 
@@ -515,7 +514,7 @@ table a, #comments a{background-color:inherit;}
             max-width:100%;}
     .ghead{ max-width:100%;}
  
-
+    /* #pageintro{padding:20px 0;} */
 
 #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
 
@@ -543,6 +542,7 @@ table a, #comments a{background-color:inherit;}
     .ghead2{ font-size: small;
             max-width:100%;}
     .ghead{ max-width:100%;}
+    /* #pageintro{padding:20px 0;} */
     #ctdetails ul li{position: relative; max-width: 100%;width: auto;}
 }
 
