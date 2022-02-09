@@ -10,10 +10,11 @@
         height: 100%;
         margin: 0;
         padding: 0;
-      }
-      table {
-        border-color:black ;width: 30%;
-      }    
+      }   
       iframe{
         padding:15px 15px 15px 15px;
       }  
+      #loc b{
+        font-size:xx-large;
+        background-color: purple;
+    }
