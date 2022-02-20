@@ -2,24 +2,23 @@ from django.shortcuts import render
 from .form import ContactForm
 from django.contrib import messages
 from .models import Donation, News, Programme, About, Gallery, Carousel
-from translate import Translator
+# from translate import Translator
 # Create your views here.
-import pyttsx3
-speaker = pyttsx3.init()
-voices = speaker.getProperty('voices')
-rate = speaker.getProperty('rate')
-speaker.setProperty('rate', 125)
-speaker.setProperty('voice', "com.apple.speech.synthesis.voice.lekha")
+# import pyttsx3
+# speaker = pyttsx3.init()
+# voices = speaker.getProperty('voices')
+# rate = speaker.getProperty('rate')
+# speaker.setProperty('rate', 125)
+# speaker.setProperty('voice', "com.apple.speech.synthesis.voice.lekha")
  
 
-def trans(request,text):
-    say_lang="en"
-    convert_lang="hi-IN"
-    translator=Translator(from_lang = say_lang,to_lang=convert_lang)
-    sentence=text
-    translation=translator.translate(text)
-    # print(translation)
-    return translation
+# def trans(request,text):
+#     say_lang="en"
+#     convert_lang="hi-IN"
+#     translator=Translator(from_lang = say_lang,to_lang=convert_lang)
+#     sentence=text
+#     translation=translator.translate(text)
+#     return translation
 
 def index(request):         
     donate = donation(request)
@@ -31,17 +30,18 @@ def index(request):
 
 def about(request):
     about = About.objects.values()
-    for voice in voices: 
-        print("Voice:") 
-        print(" - ID: %s" % voice.id) 
-        print(" - Name: %s" % voice.name) 
-        print(" - Languages: %s" % voice.languages) 
-        print(" - Gender: %s" % voice.gender) 
-        print(" - Age: %s" % voice.age)
-    txt =  trans(request,'E han Sardar Gurcharan Singh')
-    print(txt)
-    speaker.say(txt)
-    speaker.runAndWait()
+    # for voice in voices: 
+    #     print("Voice:") 
+    #     print(" - ID: %s" % voice.id) 
+    #     print(" - Name: %s" % voice.name) 
+    #     print(" - Languages: %s" % voice.languages) 
+    #     print(" - Gender: %s" % voice.gender) 
+    #     print(" - Age: %s" % voice.age)
+    # txt =  trans(request,'E han Sardar Gurcharan Singh')
+    # print(txt)
+    # speaker.say(txt)
+    # speaker.runAndWait()
+    # speaker.endLoop()
     # speaker.stop()
     img = []
     title = []
