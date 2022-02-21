@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     # All installed apps are listed here which is installed manually
     'home',
-    'pwa',
 ]
 
 MIDDLEWARE = [
