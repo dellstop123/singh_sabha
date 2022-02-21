@@ -137,3 +137,5 @@ def carousel(request):
         image.append(carousel[i]['image'])
     car = image
     return car
+
+ 

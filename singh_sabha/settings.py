@@ -16,6 +16,8 @@ from django.contrib.messages import constants as messages
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static', 'service-worker.js')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     # All installed apps are listed here which is installed manually
     'home',
+    'pwa',
 ]
 
 MIDDLEWARE = [
